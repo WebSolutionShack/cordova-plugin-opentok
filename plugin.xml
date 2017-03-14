@@ -81,4 +81,12 @@
         <access origin="*" />
       </config-file>
     </platform>
+
+    <!-- browser -->
+    <platform name="browser">
+        <hook type="before_plugin_install" src="scripts/downloadOpenTokJS.js" />
+        <js-module src="src/browser/opentok.js" name="OpenTokPlugin">
+            <clobbers target="window.OT" />
+        </js-module>
+    </platform>
 </plugin>
